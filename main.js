@@ -8,10 +8,10 @@ let targetRotationX = 0;
 let targetRotationY = 0;
 let amplitude = 0;
 let targetAmplitude = 0;
-let baseRadius = 200;
-let maxRadius = 300;
 let sphereRadius = 200;
 let targetRadius = 200;
+let baseRadius = 200;
+let maxRadius = 300;
 let animationSpeed = 0.1;
 let currentColors = {
     c1: [255, 140, 0],  // Orange
@@ -23,6 +23,8 @@ let targetColors = {
     c2: [255, 0, 128],
     c3: [0, 191, 255]
 };
+
+const AGENT_ID = import.meta.env.VITE_ELEVENLABS_AGENT_ID || 'tUaecvJOneKgii2Vwv9q';
 
 // Debug logging
 function log(message, type = 'info') {
@@ -163,7 +165,7 @@ async function startConversation() {
             document.getElementById('stopButton').disabled = false;
             
             conversation = new Conversation({
-                agentId: 'tUaecvJOneKgii2Vwv9q',
+                agentId: AGENT_ID,
                 connectionConfig: {
                     onDisconnect: () => {
                         isConnected = false;

@@ -29,12 +29,21 @@ cd elevenlabs-demo
 npm install
 ```
 
-3. Start the development server:
+3. Set up environment variables:
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env and add your ElevenLabs agent ID
+VITE_ELEVENLABS_AGENT_ID=your_agent_id_here
+```
+
+4. Start the development server:
 ```bash
 npm start
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+5. Open your browser and navigate to `http://localhost:5173`
 
 ## Usage
 
