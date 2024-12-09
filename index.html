@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevenLabs Voice Agent</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #2A2A72;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        #p5-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .controls {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 20px;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        button#startButton {
+            background: rgba(46, 196, 182, 0.4);
+            border-color: rgba(46, 196, 182, 0.6);
+        }
+        button#startButton:hover {
+            background: rgba(46, 196, 182, 0.6);
+        }
+        button#stopButton {
+            background: rgba(255, 71, 87, 0.4);
+            border-color: rgba(255, 71, 87, 0.6);
+        }
+        button#stopButton:hover {
+            background: rgba(255, 71, 87, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div id="p5-container"></div>
+    <div class="controls">
+        <button id="startButton">Start Conversation</button>
+        <button id="stopButton" disabled>End Conversation</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

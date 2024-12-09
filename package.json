@@ -1,0 +1,14 @@
+{
+  "name": "elevenlabs-demo",
+  "version": "1.0.0",
+  "description": "Demo application using ElevenLabs Conversational AI SDK",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@11labs/client": "latest",
+    "vite": "^4.5.0"
+  }
+}
